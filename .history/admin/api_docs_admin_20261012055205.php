@@ -1,0 +1,1 @@
+I will now generate the complete, fully functional HTML file for `admin/admin_api_doc.php` starting from the `<!DOCTYPE html>` declaration down to the closing `</html>` tag.

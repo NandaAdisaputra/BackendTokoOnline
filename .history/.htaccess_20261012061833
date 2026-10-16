@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /toko_online/
+
+# Aturan untuk routing Admin di subfolder
+RewriteCond %{REQUEST_URI} /toko_online/admin/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^admin/(.*)$ admin/index.php/$1 [L]
+
+# Aturan untuk routing User / Utama
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]

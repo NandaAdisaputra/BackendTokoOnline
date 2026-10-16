@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Jika mengakses folder /admin/ arahkan ke admin/index.php
+RewriteCond %{REQUEST_URI} /admin/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^admin/(.*)$ admin/index.php/$1 [L]
+
+# Jika mengakses API User biasa
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
